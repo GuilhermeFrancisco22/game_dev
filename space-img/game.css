@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+
+* {
+  font-family: "Silkscreen", sans-serif;
+}
+
+.main-game {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  color: white;
+}
+
+.main-game h1 {
+  font-size: 70px;
+  font-weight: 300;
+  animation: shadow-drop 3s ease-in-out infinite;
+  margin: 2%;
+}
+
+.content {
+  width: 800px;
+  /* background: #255784; */
+  padding: 0 2% 2%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.question-info {
+  padding: 3% 15%;
+  width: 100%;
+  border: 3px solid #01c3dc;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: question-info-animation 3s ease-in-out infinite;
+}
+
+.question-info span:last-child {
+  margin: 20px 0 0;
+}
+
+.question-info span {
+  font-size: 17px;
+  text-align: center;
+}
+
+.answers {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  align-content: stretch;
+  height: 30vh;
+}
+
+button {
+  border: 3px solid #01c3dc;
+  border-radius: 50px;
+  background: transparent;
+  color: #fff;
+  height: 75px;
+  width: 260px;
+  font-size: 1rem;
+  margin: 20px;
+  transition: 500ms;
+}
+
+button:hover {
+  box-shadow: inset 0 0 10px 8px #01c3dc;
+}
+
+.answer span {
+  font-size: 1.5rem;
+}
+
+.finish {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.finish span {
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+}
+
+.end-game {
+  color: red;
+}
+
+.div-btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.quit-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  border-radius: 0;
+}
+
+@keyframes shadow-drop {
+  0% {
+    text-shadow: 0 5px 7px #01c3dc;
+  }
+  50% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 0 5px 7px #01c3dc;
+  }
+}
+
+@keyframes question-info-animation {
+  0% {
+    box-shadow: 0 0 7px 3px #01c3dc;
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0 0 7px 3px #01c3dc;
+  }
+}

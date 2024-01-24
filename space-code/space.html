@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .space {
+      background-color: #000;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .stars-container {
+      position: absolute;
+      width: 100%;
+      height: 200%;
+      top: -100%; /* Começa acima da tela */
+      animation: stars-fall 20s linear infinite; /* Ajuste a duração da animação para cobrir toda a tela */
+    }
+
+    @keyframes stars-fall {
+      from {
+        transform: translateY(0%);
+      }
+      to {
+        transform: translateY(100%);
+      }
+    }
+
+    /* Restante do seu CSS */
+
+  </style>
+</head>
+<body>
+  <div class="space">
+    <div class="stars-container"></div>
+  </div>
+  <script>
+    function createStars() {
+      const starsContainer = document.querySelector(".stars-container");
+      const starDensity = 700; // Ajuste a densidade de estrelas
+
+      for (let i = 0; i < starDensity; i++) {
+        const star = document.createElement("div");
+        star.classList.add("stars");
+
+        if (Math.random() < 0.25) {
+          star.classList.add("large-stars");
+        }
+
+        const x = Math.random() * window.innerWidth; // Posição horizontal aleatória
+        const y = Math.random() * window.innerHeight * 2; // Dobrar a altura para cobrir toda a tela
+
+        star.style.left = `${x}px`; // Define a posição horizontal
+        star.style.top = `${y}px`; // Define a posição vertical
+
+        const delay = Math.random() * 10; // Ajuste o atraso para criar estrelas em momentos diferentes
+        star.style.animationDelay = `-${delay}s`; // Definindo um atraso aleatório para cada estrela
+
+        starsContainer.appendChild(star);
+      }
+    }
+
+    createStars();
+  </script>
+</body>
+</html>

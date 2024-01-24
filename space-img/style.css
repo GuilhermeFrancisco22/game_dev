@@ -1,0 +1,24 @@
+@import url("starGame.css");
+@import url("game.css");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("./space.jpg");
+  background-size: 30%;
+  background-position: top center;
+  background-attachment: fixed;
+  animation: bounce-background 30s linear infinite;
+}
+
+@keyframes bounce-background {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -1000px; /* Experimente ajustar esse valor */
+  }
+}

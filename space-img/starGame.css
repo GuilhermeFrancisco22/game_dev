@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+
+.card-game {
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  color: black;
+  font-family: "Silkscreen", sans-serif;
+}
+
+.card-game span {
+  color: #fff;
+  font-size: 100px;
+  opacity: 0;
+}
+
+.card-game span:nth-of-type(1) {
+  animation: move-logo1 2s ease-in-out forwards 1s;
+}
+.card-game span:nth-of-type(2) {
+  animation: move-logo2 2s ease-in-out forwards 1s;
+}
+.card-game span:nth-of-type(3) {
+  animation: move-logo1 2s ease-in-out forwards 1s;
+}
+.card-game span:nth-of-type(4) {
+  animation: move-logo2 2s ease-in-out forwards 1s;
+}
+
+.animate-logo span {
+  opacity: 0;
+  transition: 1s;
+  text-shadow: none;
+}
+
+.animate-logo span:nth-of-type(1) {
+  animation: opacity-logo 1s ease-in-out forwards 2s;
+}
+.animate-logo span:nth-of-type(2) {
+  animation: opacity-logo 1s ease-in-out forwards 2.25s;
+}
+.animate-logo span:nth-of-type(3) {
+  animation: opacity-logo 1s ease-in-out forwards 2.5s;
+}
+.animate-logo span:nth-of-type(4) {
+  animation: opacity-logo 1s ease-in-out forwards 2.75s;
+}
+.animate-logo span:nth-of-type(5) {
+  animation: opacity-logo 1s ease-in-out forwards 3s;
+}
+.animate-logo span:nth-of-type(6) {
+  animation: opacity-logo 1s ease-in-out forwards 3.25s;
+}
+.animate-logo span:nth-of-type(7) {
+  animation: opacity-logo 1s ease-in-out forwards 3.5s;
+}
+
+.btn-start {
+  position: relative;
+  display: inline-block;
+  margin: 20px 0;
+  padding: 15px 30px;
+  color: #2196f3;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.btn-start:hover {
+  color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay: 1s;
+}
+
+.btn-start span {
+  position: absolute;
+  display: block;
+}
+.btn-start span:nth-of-type(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+.btn-start:hover span:nth-of-type(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.btn-start span:nth-of-type(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #2196f3);
+}
+
+.btn-start:hover span:nth-of-type(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.btn-start span:nth-of-type(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #2196f3);
+}
+
+.btn-start:hover span:nth-of-type(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.btn-start span:nth-of-type(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #2196f3);
+}
+
+.btn-start:hover span:nth-of-type(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+@keyframes move-logo1 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    text-shadow: 5px 3px 1px #01c3dc;
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes move-logo2 {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    text-shadow: 5px 3px 1px #01c3dc;
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity-logo {
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 5px 3px 1px #01c3dc;
+  }
+}
+
+@keyframes shadow-drop {
+  0% {
+    text-shadow: 0 5px 7px #01c3dc;
+  }
+  50% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 0 5px 7px #01c3dc;
+  }
+}
